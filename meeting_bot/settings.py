@@ -17,7 +17,8 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = config(
     'ALLOWED_HOSTS',
-    default='localhost,127.0.0.1',
+    # include onrender.com so Render deployments are allowed by default
+    default='localhost,127.0.0.1,.onrender.com',
     cast=Csv()
 )
 
