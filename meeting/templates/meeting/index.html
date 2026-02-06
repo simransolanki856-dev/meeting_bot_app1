@@ -1,0 +1,89 @@
+{% extends 'meeting/base.html' %}
+
+{% block title %}Home - Meeting Bot Summarizer{% endblock %}
+
+{% block content %}
+<section class="hero py-5 bg-light">
+    <div class="container-lg">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1 class="display-4 fw-bold mb-4">Meeting Bot Summarizer</h1>
+                <p class="lead mb-4">Automatically summarize your meetings, extract key points, decisions, and action items using AI.</p>
+                <div class="d-flex gap-3">
+                    <a href="{% url 'meeting:create_meeting' %}" class="btn btn-primary btn-lg">
+                        <i class="fas fa-plus"></i> Create Meeting
+                    </a>
+                    <a href="{% url 'meeting:meeting_history' %}" class="btn btn-outline-primary btn-lg">
+                        <i class="fas fa-history"></i> View History
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="illustration-placeholder">
+                    <i class="fas fa-video fa-10x text-primary opacity-25"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features py-5">
+    <div class="container-lg">
+        <h2 class="text-center mb-5">Features</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="feature-card p-4 text-center">
+                    <i class="fas fa-file-upload fa-2x text-primary mb-3"></i>
+                    <h4>Easy Upload</h4>
+                    <p>Upload meeting recordings in MP3, WAV, MP4 format or paste transcript directly.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card p-4 text-center">
+                    <i class="fas fa-brain fa-2x text-success mb-3"></i>
+                    <h4>AI Powered</h4>
+                    <p>Leverages advanced LLMs to generate intelligent, contextual summaries.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card p-4 text-center">
+                    <i class="fas fa-list-check fa-2x text-warning mb-3"></i>
+                    <h4>Structured Output</h4>
+                    <p>Get summaries, key points, decisions, and action items in organized format.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card p-4 text-center">
+                    <i class="fas fa-download fa-2x text-info mb-3"></i>
+                    <h4>Export Results</h4>
+                    <p>Download summaries as TXT or PDF for easy sharing and archiving.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card p-4 text-center">
+                    <i class="fas fa-search fa-2x text-danger mb-3"></i>
+                    <h4>Search & Filter</h4>
+                    <p>Easily search and filter through your meeting history by title or type.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card p-4 text-center">
+                    <i class="fas fa-lock fa-2x text-secondary mb-3"></i>
+                    <h4>Secure Storage</h4>
+                    <p>Your meeting data is stored securely and is always accessible.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta py-5 bg-primary text-white">
+    <div class="container-lg text-center">
+        <h2 class="mb-4">Get Started Today</h2>
+        <p class="lead mb-4">Start summarizing your meetings and save time on documentation.</p>
+        <a href="{% url 'meeting:create_meeting' %}" class="btn btn-light btn-lg">
+            <i class="fas fa-arrow-right"></i> Create Your First Meeting
+        </a>
+    </div>
+</section>
+{% endblock %}
