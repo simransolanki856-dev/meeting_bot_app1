@@ -14,7 +14,7 @@ pydub==0.25.1
 
 # PDF Export (optional)
 reportlab==4.0.7
-Pillow==3.12.12
+Pillow==9.5.0
 
 # Database
 django-filter==23.4
